@@ -5,7 +5,7 @@ module.exports = {
   devtool: 'eval-source-map',
   entry: {
     main: [
-      'webpack-dev-server/client?http://localhost:8080',
+      // 'webpack-dev-server/client?http://localhost:8080',
       'webpack/hot/only-dev-server',
       './src/main.js'
     ]
@@ -18,7 +18,7 @@ module.exports = {
   plugins: [
     new webpack.HotModuleReplacementPlugin(),
     new webpack.NoErrorsPlugin()
-   
+
   ],
   module: {
     loaders: [

@@ -9,17 +9,12 @@ var AppBar = mui.AppBar;
 class App extends React.Component {
   constructor(){
     super();
-
     ThemeManager.setPalette({
       primary1Color: Colors.blue500,
       primary2Color: Colors.blue700,
       primary3Color: Colors.blue100,
       accent1Color: Colors.pink400
     });
-  }
-
-   static childContextTypes = {
-    muiTheme: React.PropTypes.object
   }
 
   getChildContext(){
@@ -39,13 +34,16 @@ class App extends React.Component {
           width: '100%',
           margin: '30px auto 30px'
         }}>
-      
+
         </div>
-       
+
       </div>
     );
   }
 }
 
+App.childContextTypes = {
+    muiTheme: React.PropTypes.object
+};
 
 export default App;
